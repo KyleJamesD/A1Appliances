@@ -245,46 +245,98 @@ namespace ModernAppliances
         /// </summary>
         public override void DisplayDishwashers()
         {
-            Console.WriteLine("This is for testing");
+            // Console.WriteLine("This is for testing");
             // Write "Possible options:"
+            Console.WriteLine("Possible options");
 
             // Write "0 - Any"
             // Write "1 - Quietest"
             // Write "2 - Quieter"
             // Write "3 - Quiet"
             // Write "4 - Moderate"
+            Console.WriteLine("0 - Any");
+            Console.WriteLine("1 - Quietest");
+            Console.WriteLine("2 - Quiter");
+            Console.WriteLine("3 - Quiet");
+            Console.WriteLine("4 - Moderate");
 
             // Write "Enter sound rating:"
+            Console.WriteLine("Enter sound rating:");
 
             // Get user input as string and assign to variable
-
+            string soundRating = Console.ReadLine();
             // Create variable that holds sound rating
+            int soundRatingNum = int.Parse(soundRating);
 
             // Test input is "0"
-            // Assign "Any" to sound rating variable
+            if (soundRatingNum == 0)
+            {
+                // Assign "Any" to sound rating variable
+                soundRating = "Any";
+            }
             // Test input is "1"
-            // Assign "Qt" to sound rating variable
+            else if (soundRatingNum == 1)
+            {
+                // Assign "Qt" to sound rating variable
+                soundRating = "Qt";
+            }
             // Test input is "2"
-            // Assign "Qr" to sound rating variable
+            else if (soundRatingNum == 2)
+            {
+                // Assign "Qr" to sound rating variable
+                soundRating = "Qr";
+            }
             // Test input is "3"
-            // Assign "Qu" to sound rating variable
+            else if (soundRatingNum == 3)
+            {
+                // Assign "Qu" to sound rating variable
+                soundRating = "Qu";
+            }
             // Test input is "4"
-            // Assign "M" to sound rating variable
+            else if (soundRatingNum == 4)
+            {
+                // Assign "M" to sound rating variable
+                soundRating = "M";
+            }
             // Otherwise (input is something else)
-            // Write "Invalid option."
-            // Return to calling method
+            else
+            {
+                // Write "Invalid option."
+                Console.WriteLine("Invalid option");
+                // Return to calling method
+                return;
+            }
+
 
             // Create variable that holds list of found appliances
+            List<Dishwasher> dishwashersFound = new List<Dishwasher>();
 
             // Loop through Appliances
-            // Test if current appliance is dishwasher
-            // Down cast current Appliance to Dishwasher
+            foreach (Appliance appliance in Appliances)
+            {
+                // Test if current appliance is dishwasher
+                if (appliance is Dishwasher)
+                {
+                    // Down cast current Appliance to Dishwasher
+                    Dishwasher dishwasher = (Dishwasher)appliance;
+                    // Test sound rating is "Any" or equals soundrating for current dishwasher
+                    // Add current appliance in list to found list
+                    if (dishwasher.SoundRating.Equals(soundRating) || soundRating.Equals("Any"))
+                    {
+                        dishwashersFound.Add(dishwasher);
+                    }
+                }
+            }
 
-            // Test sound rating is "Any" or equals soundrating for current dishwasher
-            // Add current appliance in list to found list
+
 
             // Display found appliances (up to max. number inputted)
             // DisplayAppliancesFromList(found, 0);
+            Console.WriteLine("\nMatching Dishwashers:\n");
+            foreach (Dishwasher dishwasher in dishwashersFound)
+            {
+                Console.WriteLine(dishwasher.ToString() + "\n");
+            }
         }
 
         /// <summary>
