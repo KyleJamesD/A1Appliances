@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\github\\A1Appliances\\A1ModernAppliances - working on\\A1ModernAppliances\\ModernAppliances.csproj": {}
+    "C:\\Users\\kyled\\Desktop\\Github\\A1Appliances\\A1ModernAppliances - working on\\A1ModernAppliances\\ModernAppliances.csproj": {}
   },
   "projects": {
-    "C:\\github\\A1Appliances\\A1ModernAppliances - working on\\A1ModernAppliances\\ModernAppliances.csproj": {
+    "C:\\Users\\kyled\\Desktop\\Github\\A1Appliances\\A1ModernAppliances - working on\\A1ModernAppliances\\ModernAppliances.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\github\\A1Appliances\\A1ModernAppliances - working on\\A1ModernAppliances\\ModernAppliances.csproj",
+        "projectUniqueName": "C:\\Users\\kyled\\Desktop\\Github\\A1Appliances\\A1ModernAppliances - working on\\A1ModernAppliances\\ModernAppliances.csproj",
         "projectName": "ModernAppliances",
-        "projectPath": "C:\\github\\A1Appliances\\A1ModernAppliances - working on\\A1ModernAppliances\\ModernAppliances.csproj",
-        "packagesPath": "C:\\Users\\lijun\\.nuget\\packages\\",
-        "outputPath": "C:\\github\\A1Appliances\\A1ModernAppliances - working on\\A1ModernAppliances\\obj\\",
+        "projectPath": "C:\\Users\\kyled\\Desktop\\Github\\A1Appliances\\A1ModernAppliances - working on\\A1ModernAppliances\\ModernAppliances.csproj",
+        "packagesPath": "C:\\Users\\kyled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kyled\\Desktop\\Github\\A1Appliances\\A1ModernAppliances - working on\\A1ModernAppliances\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lijun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kyled\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -55,24 +55,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.26, 6.0.26]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.26, 6.0.26]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.26, 6.0.26]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.26, 6.0.26]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
