@@ -60,7 +60,7 @@ namespace ModernAppliances
                 // Checkout found appliance
                 foundAppliance.Checkout();
                 // Write "Appliance has been checked out."
-                Console.WriteLine($"The Appliance {ItemNumber} has been Checked out.\n");
+                Console.WriteLine($"The Appliance \"{ItemNumber}\" has been Checked out.\n");
                 return;
             }
 
@@ -68,7 +68,7 @@ namespace ModernAppliances
             // Otherwise (appliance isn't available)
             // Write "The appliance is not available to be checked out."
             {
-                Console.WriteLine("The Appliance is not available to be checked out.");
+                Console.WriteLine("The Appliance is not available to be checked out.\n");
             }
 
 
@@ -79,7 +79,7 @@ namespace ModernAppliances
         /// </summary>
         public override void Find()
         {
-            Console.WriteLine("This is for testing");
+
             // Write "Enter brand to search for:"
             Console.WriteLine("Enter brand to search for:");
             // Create string variable to hold entered brand
@@ -120,7 +120,7 @@ namespace ModernAppliances
         public override void DisplayRefrigerators()
         {
             //Display options and ask for users input assigns it to numOfDoors Int Variable
-            Console.WriteLine("0 - Any");
+            Console.WriteLine("\n0 - Any");
             Console.WriteLine("2 - Double doors");
             Console.WriteLine("3 - Three doors");
             Console.WriteLine("4 - Four doors");
@@ -198,12 +198,13 @@ namespace ModernAppliances
                 }
             }
             //Prints out list of Refrigerators that match the user's spec declaration.
-            Console.WriteLine("MATCHING REFRIGERATORS: ");
+            Console.WriteLine("Matching Refrigerators: \n");
             for (int i = 0; i < final.Count; i++)
             {
 
-                Console.WriteLine(final[i]);
+                Console.WriteLine(final[i]+"\n");
             }
+
         }
 
         /// <summary>
@@ -289,7 +290,7 @@ namespace ModernAppliances
             }
 
             //Displays options for voltage and asks for user input
-            Console.WriteLine("0 - Any");
+            Console.WriteLine("\n0 - Any");
             Console.WriteLine("1 - 18 Volt");
             Console.WriteLine("2 - 24 Volt");
             Console.WriteLine("Enter Voltage");
@@ -326,10 +327,10 @@ namespace ModernAppliances
                 }
             }
             //Prints out a List of Vacuums that match the users spec's declared.
-            Console.WriteLine("MATCHING VACUUMS: ");
+            Console.WriteLine("Matching Vacuums: ");
             for (int c = 0; c < voltageVacuum.Count; c++)
             {
-                Console.WriteLine(voltageVacuum[c]);
+                Console.WriteLine(voltageVacuum[c]+"\n");
             }
         }
         /// <summary>
@@ -337,7 +338,6 @@ namespace ModernAppliances
         /// </summary>
         public override void DisplayMicrowaves()
         {
-            Console.WriteLine("This is for testing");
             // Write "Possible options:"
             Console.WriteLine("Possible options:");
             // Write "0 - Any"
@@ -409,7 +409,7 @@ namespace ModernAppliances
         /// </summary>
         public override void DisplayDishwashers()
         {
-            // Console.WriteLine("This is for testing");
+
             // Write "Possible options:"
             Console.WriteLine("Possible options");
 
@@ -508,9 +508,9 @@ namespace ModernAppliances
         /// </summary>
         public override void RandomList()
         {
-            // Console.WriteLine("This is for testing");
+
             // Write "Appliance Types"
-            Console.WriteLine("Appliance Types");
+            Console.WriteLine("\nAppliance Types");
 
             // Write "0 - Any"
             // Write "1 – Refrigerators"
@@ -521,7 +521,7 @@ namespace ModernAppliances
             Console.WriteLine("1 - Refrigirators");
             Console.WriteLine("2 - Vacuums");
             Console.WriteLine("3 - Microwaves");
-            Console.WriteLine("4 - Dishwashers");
+            Console.WriteLine("4 - Dishwashers\n");
 
             // Write "Enter type of appliance:"
             Console.WriteLine("Enter type of appliance:");

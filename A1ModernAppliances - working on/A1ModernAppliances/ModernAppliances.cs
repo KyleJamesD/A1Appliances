@@ -65,6 +65,7 @@ namespace ModernAppliances
             Console.WriteLine("3 – Display appliances by type");
             Console.WriteLine("4 – Produce random appliance list");
             Console.WriteLine("5 – Save & exit");
+            Console.WriteLine("\nEnter option:");
         }
 
         /// <summary>
@@ -82,13 +83,13 @@ namespace ModernAppliances
         /// </summary>
         public void DisplayType()
         {
-            Console.WriteLine("Appliance Types");
+            Console.WriteLine("\nAppliance Types");
             Console.WriteLine("1 – Refrigerators");
             Console.WriteLine("2 – Vacuums");
             Console.WriteLine("3 – Microwaves");
             Console.WriteLine("4 – Dishwashers");
 
-            Console.Write("Enter type of appliance:");
+            Console.Write("Enter type of appliance:\n");
 
             int applianceTypeNum;
             bool parsedApplianceType = int.TryParse(Console.ReadLine(), out applianceTypeNum);

@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ucX7FF4tGItqYiPbINF8cnL8MsYAIsAsaFWXw1cRTMSNGtDLJR/ZvO3/K+ilpSmiJiCrp1ErfnOAq01Jn8raLg==",
+  "dgSpecHash": "J3Rq2QoBNgZ2B80QqLATlbv5qKVOMtzRwQ/pb9LWj7M6bvcIZWvbyljxuOihendLwQQXEZic1Pu7ov0AyBqSZA==",
   "success": true,
-  "projectFilePath": "C:\\github\\A1Appliances\\A1ModernAppliances - working on\\A1ModernAppliances\\ModernAppliances.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\lijun\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\lijun\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\lijun\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\lijun\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.26\\microsoft.netcore.app.host.win-x64.6.0.26.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\kyled\\Desktop\\Github\\A1Appliances\\A1ModernAppliances - working on\\A1ModernAppliances\\ModernAppliances.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
