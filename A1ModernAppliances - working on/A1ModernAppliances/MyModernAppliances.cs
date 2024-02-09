@@ -360,46 +360,98 @@ namespace ModernAppliances
         /// </summary>
         public override void DisplayDishwashers()
         {
-            Console.WriteLine("This is for testing");
+            // Console.WriteLine("This is for testing");
             // Write "Possible options:"
+            Console.WriteLine("Possible options");
 
             // Write "0 - Any"
             // Write "1 - Quietest"
             // Write "2 - Quieter"
             // Write "3 - Quiet"
             // Write "4 - Moderate"
+            Console.WriteLine("0 - Any");
+            Console.WriteLine("1 - Quietest");
+            Console.WriteLine("2 - Quiter");
+            Console.WriteLine("3 - Quiet");
+            Console.WriteLine("4 - Moderate");
 
             // Write "Enter sound rating:"
+            Console.WriteLine("Enter sound rating:");
 
             // Get user input as string and assign to variable
-
+            string soundRating = Console.ReadLine();
             // Create variable that holds sound rating
+            int soundRatingNum = int.Parse(soundRating);
 
             // Test input is "0"
-            // Assign "Any" to sound rating variable
+            if (soundRatingNum == 0)
+            {
+                // Assign "Any" to sound rating variable
+                soundRating = "Any";
+            }
             // Test input is "1"
-            // Assign "Qt" to sound rating variable
+            else if (soundRatingNum == 1)
+            {
+                // Assign "Qt" to sound rating variable
+                soundRating = "Qt";
+            }
             // Test input is "2"
-            // Assign "Qr" to sound rating variable
+            else if (soundRatingNum == 2)
+            {
+                // Assign "Qr" to sound rating variable
+                soundRating = "Qr";
+            }
             // Test input is "3"
-            // Assign "Qu" to sound rating variable
+            else if (soundRatingNum == 3)
+            {
+                // Assign "Qu" to sound rating variable
+                soundRating = "Qu";
+            }
             // Test input is "4"
-            // Assign "M" to sound rating variable
+            else if (soundRatingNum == 4)
+            {
+                // Assign "M" to sound rating variable
+                soundRating = "M";
+            }
             // Otherwise (input is something else)
-            // Write "Invalid option."
-            // Return to calling method
+            else
+            {
+                // Write "Invalid option."
+                Console.WriteLine("Invalid option");
+                // Return to calling method
+                return;
+            }
+
 
             // Create variable that holds list of found appliances
+            List<Dishwasher> dishwashersFound = new List<Dishwasher>();
 
             // Loop through Appliances
-            // Test if current appliance is dishwasher
-            // Down cast current Appliance to Dishwasher
+            foreach (Appliance appliance in Appliances)
+            {
+                // Test if current appliance is dishwasher
+                if (appliance is Dishwasher)
+                {
+                    // Down cast current Appliance to Dishwasher
+                    Dishwasher dishwasher = (Dishwasher)appliance;
+                    // Test sound rating is "Any" or equals soundrating for current dishwasher
+                    // Add current appliance in list to found list
+                    if (dishwasher.SoundRating.Equals(soundRating) || soundRating.Equals("Any"))
+                    {
+                        dishwashersFound.Add(dishwasher);
+                    }
+                }
+            }
 
-            // Test sound rating is "Any" or equals soundrating for current dishwasher
-            // Add current appliance in list to found list
+
 
             // Display found appliances (up to max. number inputted)
             // DisplayAppliancesFromList(found, 0);
+            Console.WriteLine("\nMatching Dishwashers:\n");
+            foreach (Dishwasher dishwasher in dishwashersFound)
+            {
+                Console.WriteLine(dishwasher.ToString() + "\n");
+            }
         }
 
         /// <summary>
@@ -407,48 +459,83 @@ namespace ModernAppliances
         /// </summary>
         public override void RandomList()
         {
-            Console.WriteLine("This is for testing");
+            // Console.WriteLine("This is for testing");
             // Write "Appliance Types"
+            Console.WriteLine("Appliance Types");
 
             // Write "0 - Any"
             // Write "1 – Refrigerators"
             // Write "2 – Vacuums"
             // Write "3 – Microwaves"
             // Write "4 – Dishwashers"
+            Console.WriteLine("0 - Any");
+            Console.WriteLine("1 - Refrigirators");
+            Console.WriteLine("2 - Vacuums");
+            Console.WriteLine("3 - Microwaves");
+            Console.WriteLine("4 - Dishwashers");
 
             // Write "Enter type of appliance:"
+            Console.WriteLine("Enter type of appliance:");
 
             // Get user input as string and assign to appliance type variable
+            string applianceType = Console.ReadLine();
 
             // Write "Enter number of appliances: "
+            Console.WriteLine("Enter number of appliances:");
 
             // Get user input as string and assign to variable
+            string inputApplianceNumbers = Console.ReadLine();
 
             // Convert user input from string to int
+            int numberOfAppliances = int.Parse(inputApplianceNumbers);
 
             // Create variable to hold list of found appliances
+            List<Appliance> foundAppliance = new List<Appliance>();
 
             // Loop through appliances
-            // Test inputted appliance type is "0"
-            // Add current appliance in list to found list
-            // Test inputted appliance type is "1"
-            // Test current appliance type is Refrigerator
-            // Add current appliance in list to found list
-            // Test inputted appliance type is "2"
-            // Test current appliance type is Vacuum
-            // Add current appliance in list to found list
-            // Test inputted appliance type is "3"
-            // Test current appliance type is Microwave
-            // Add current appliance in list to found list
-            // Test inputted appliance type is "4"
-            // Test current appliance type is Dishwasher
-            // Add current appliance in list to found list
+            foreach (Appliance appliance in Appliances)
+            {
+                // Test inputted appliance type is "0"
+                if (applianceType.Equals("0"))
+                {
+                    // Add current appliance in list to found list
+                    foundAppliance.Add(appliance);
+                }
+                // Test inputted appliance type is "1"
+                // Test current appliance type is Refrigerator
+                else if (applianceType.Equals("1") && appliance is Refrigerator)
+                {
+                    // Add current appliance in list to found list
+                    foundAppliance.Add(appliance);
+                }
+                // Test inputted appliance type is "2"
+                // Test current appliance type is Vacuum
+                else if (applianceType.Equals("2") && appliance is Vacuum)
+                {
+                    // Add current appliance in list to found list
+                    foundAppliance.Add(appliance);
+                }
+                // Test inputted appliance type is "3"
+                // Test current appliance type is Microwave
+                else if (applianceType.Equals("3") && appliance is Microwave)
+                {
+                    // Add current appliance in list to found list
+                    foundAppliance.Add(appliance);
+                }
+                // Test inputted appliance type is "4"
+                // Test current appliance type is Dishwasher
+                else if (applianceType.Equals("4") && appliance is Dishwasher)
+                {
+                    // Add current appliance in list to found list
+                    foundAppliance.Add(appliance);
+                }
+            }
 
             // Randomize list of found appliances
-            // found.Sort(new RandomComparer());
+            foundAppliance.Sort(new RandomComparer());
 
             // Display found appliances (up to max. number inputted)
-            // DisplayAppliancesFromList(found, num);
+            DisplayAppliancesFromList(foundAppliance, numberOfAppliances);
         }
     }
 }
